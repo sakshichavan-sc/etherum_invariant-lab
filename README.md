@@ -168,6 +168,17 @@ Passing tests do not prove the absence of all vulnerabilities. More extensive te
 - Improve test documentation and reproducibility.
 - Integrate automated testing into a CI workflow.
 
+
+## Test Results
+
+### 1. Invariant Failure — Vulnerable Contract
+
+![Invariant test failure](screenshots/01-invariant-test.png)
+
+### 2. All Tests Passing — After Fix
+
+![Tests passing after fix](screenshots/02-tests-pass-after-fix.png)
+
 ## Disclaimer
 
 For educational and research purposes only. The vulnerable implementation is intentionally insecure and must not be used with real funds or deployed to a live network.

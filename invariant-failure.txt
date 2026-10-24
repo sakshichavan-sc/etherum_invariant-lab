@@ -1,0 +1,37 @@
+Compiling 21 files with Solc 0.8.35
+Solc 0.8.35 finished in 470.52ms
+Compiler run successful!
+{"timestamp":1792834519,"event":"failure","invariant":"invariant_vaultSolvent","target":"test/EtherVaultInvariant.t.sol:EtherVaultInvariantTest","reason":"assertion failed: 191827162233046016 > 18009084234387869"}
+
+Ran 1 test for test/EtherVaultInvariant.t.sol:EtherVaultInvariantTest
+[FAIL: assertion failed: 191827162233046016 > 18009084234387869]
+	[Sequence] (original: 7, shrunk: 2)
+		sender=0x00000000000000000000000000000000000015f2 addr=[test/EtherVaultInvariant.t.sol:VaultHandler]0x2e234DAe75C793f67A35089C9d99245E1C58470b calldata=deposit(uint256,uint256) args=[669509846116742183336206134419853159178447706174762301598 [6.695e56], 1345984469288720939975540191827162231726180 [1.345e42]]
+		sender=0x00000000000000000000000000000000000016A1 addr=[test/EtherVaultInvariant.t.sol:VaultHandler]0x2e234DAe75C793f67A35089C9d99245E1C58470b calldata=withdraw(uint256,uint256) args=[1534872069063719358003157838539473865 [1.534e36], 31050851504384718302460488110872459657510700751317552480327281251 [3.105e64]]
+ invariant_vaultSolvent() (runs: 0, calls: 0, reverts: 0)
+
+╭--------------+----------+-------+---------+----------╮
+| Contract     | Selector | Calls | Reverts | Discards |
++======================================================+
+| VaultHandler | deposit  | 3     | 0       | 0        |
+|--------------+----------+-------+---------+----------|
+| VaultHandler | withdraw | 4     | 0       | 0        |
+╰--------------+----------+-------+---------+----------╯
+
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 384.55ms (384.01ms CPU time)
+
+Ran 1 test suite in 385.76ms (384.55ms CPU time): 0 tests passed, 1 failed, 0 skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/EtherVaultInvariant.t.sol:EtherVaultInvariantTest
+[FAIL: assertion failed: 191827162233046016 > 18009084234387869]
+	[Sequence] (original: 7, shrunk: 2)
+		sender=0x00000000000000000000000000000000000015f2 addr=[test/EtherVaultInvariant.t.sol:VaultHandler]0x2e234DAe75C793f67A35089C9d99245E1C58470b calldata=deposit(uint256,uint256) args=[669509846116742183336206134419853159178447706174762301598 [6.695e56], 1345984469288720939975540191827162231726180 [1.345e42]]
+		sender=0x00000000000000000000000000000000000016A1 addr=[test/EtherVaultInvariant.t.sol:VaultHandler]0x2e234DAe75C793f67A35089C9d99245E1C58470b calldata=withdraw(uint256,uint256) args=[1534872069063719358003157838539473865 [1.534e36], 31050851504384718302460488110872459657510700751317552480327281251 [3.105e64]]
+ invariant_vaultSolvent() (runs: 0, calls: 0, reverts: 0)
+
+Encountered a total of 1 failing tests, 0 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 1 failed test
+
+Fuzz seed: 0x1fdd61c78f357ec6fbf8c3ccc745d36fb5fe311770ffaba8a3815b19225eb816 (use `--fuzz-seed` to reproduce)
